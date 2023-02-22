@@ -1,4 +1,15 @@
-let slideIndex = 1;
+// preloader
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+      document.querySelector("body").classList.add("loaded");
+  }, 50)
+});
+// preloader ends
+
+// test
+if(!document.getElementById("contactPage")) {
+  // if this is contact page, do not fire this scripts. Because I don't have slider on contact page
+  let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -23,4 +34,5 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+}
 }
